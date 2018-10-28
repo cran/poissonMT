@@ -1,0 +1,19 @@
+useDynLib(poissonMT, .registration=TRUE)
+importFrom("stats", "dpois", "lm.wfit", "median", "optim", "poisson",
+           "ppois", "qpois", "sd", "splinefun", "mahalanobis", "glm.fit")
+importFrom("utils", "data")
+importFrom("robustbase", "Mchi", "Mpsi", "Mwgt", "covMcd", "glmrobMT.control")
+importFrom("robcbi", "cubinf", "cubinf.control")   
+importFrom("MASS", "cov.rob")
+importFrom("checkmate", "testPathForOutput")
+  
+export(
+  glmrobMT,
+  poissonMT,
+  poissonMTinitial,
+  poissonSSinitial,  
+  poissonMTinitialParallel,
+  poissonL2T,
+  poissonMTsetwd,
+  poissonMTgetwd
+)
